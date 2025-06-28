@@ -97,5 +97,5 @@ Files like model.h5, label_encoder.pkl, and the dataset/ folder are excluded fro
 You can generate these locally using the notebook, or request them from the author.
 
 📧 Contact
-Manthena Sai Phani Sreeja
-GitHub: https://github.com/sreeja21407
+  Manthena Sai Phani Sreeja
+  GitHub: https://github.com/sreeja21407
