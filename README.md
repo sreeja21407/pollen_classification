@@ -1,33 +1,39 @@
 # pollen_classification
+
 🌾 Pollen Profiling - Automated Classification of Pollen Grains
-Welcome to Pollen Profiling, a deep learning-based pollen grain classification project using TensorFlow and Keras.
+Welcome to Pollen Profiling, a deep learning-based project for classifying pollen grains from microscopic images using TensorFlow and Keras.
 
-🚀 ## Project Overview
-This project focuses on classifying pollen grain species from microscopic images using a Convolutional Neural Network (CNN). It includes:
+🚀 Project Overview
+This project aims to automatically classify pollen grain species using a Convolutional Neural Network (CNN) trained on high-resolution microscopic images.
 
-✅ A custom-trained Keras model (model.h5)
+Key Features:
 
-✅ Preprocessed pollen image dataset (excluded from Git)
+✅ Custom-trained Keras model (model.h5)
 
-✅ A simple Flask-based web application
+✅ Preprocessed pollen dataset (excluded from Git)
 
-📁 ## Directory Structure
-php
+✅ Flask-based interactive web application
+
+✅ Label encoder for decoding model predictions
+
+📁 Directory Structure
+graphql
 Copy
 Edit
 Pollen-Profiling/
 │
-├── app.py                         # Flask backend & routing
-├── model.h5                       # Trained model (gitignored)
-├── label_encoder.pkl              # Label encoder (gitignored)
-├── dataset/                       # Pollen image dataset (gitignored)
-├── static/                        # CSS & uploaded images
-├── templates/                     # HTML templates
-├── pollen_grain_classification.ipynb  # Training & model building notebook
+├── app.py                         # Flask backend
+├── model.h5                      # Trained CNN model (excluded from Git)
+├── label_encoder.pkl             # Encodes/decodes labels (excluded from Git)
+├── dataset/                      # Pollen images (excluded from Git)
+├── static/                       # CSS and uploaded images
+├── templates/                    # HTML templates for Flask
+├── pollen_grain_classification.ipynb  # Jupyter notebook for model training
+├── requirements.txt              # Python dependencies
 ├── .gitignore
 └── README.md
-🚫 Files Ignored via .gitignore
-To keep the repository clean and lightweight:
+🚫 Files & Git Ignore Policy
+The following files and folders are excluded to reduce repo size and comply with GitHub's upload limits:
 
 gitignore
 Copy
@@ -35,53 +41,61 @@ Edit
 dataset/
 *.h5
 *.pkl
+__pycache__/
 *.pyc
-_pycache_/
-python-*.exe
-These files must be downloaded or generated locally before running the project.
+python-.exe
+⚠️ Note: You must download or generate the model and dataset files before running the project locally.
 
 📊 Model Details
-Type: Convolutional Neural Network (CNN)
+Model Type: Convolutional Neural Network (CNN)
 
 Framework: TensorFlow & Keras
 
-Model File: model.h5
+Accuracy: ~99%
 
-Accuracy: 99% 
+Trained Model: model.h5
 
-Encoder File: label_encoder.pkl (used for decoding predictions)
+Label Encoder: label_encoder.pkl
 
 🌐 Web Application (Flask)
-The app features:
+Features include:
 
-📤 Upload an image
+📤 Upload a microscopic pollen image
 
-🔍 Predict pollen species
+🧠 Predict the pollen species
 
-🧠 Display prediction & confidence level
+📈 Display prediction and confidence score
 
-🔁 Logout navigation
+🔁 Simple user interface and logout navigation
 
-▶ How to Run
-🔧 Install dependencies:
+▶️ How to Run Locally
+1️⃣ Install Dependencies
 bash
 Copy
 Edit
 pip install -r requirements.txt
-🚀 Start the Flask server:
+2️⃣ Start the Flask App
 bash
 Copy
 Edit
 set FLASK_APP=app.py
 set FLASK_ENV=development
 flask run
-Open your browser at http://127.0.0.1:5000/
+(Use export instead of set on Linux/macOS)
+
+3️⃣ Open in Browser
+Go to: http://127.0.0.1:5000
+
+📽 Demo Video
+🎥 https://drive.google.com/file/d/13DKMSDH7BKhYfMu2kUQBBZeC5TXz6lG9/view?usp=sharing
+
+(Replace the link above with your actual video once it's ready.)
 
 📄 Project Notes
-GitHub restricts pushing files larger than 100MB, so model.h5 is excluded from version control.
+Files like model.h5, label_encoder.pkl, and the dataset/ folder are excluded from Git due to size limits.
 
-Please generate or request the model and dataset files as needed.
+You can generate these locally using the notebook, or request them from the author.
 
 📧 Contact
 Manthena Sai Phani Sreeja
-Email: sreejamanthena44@gmail.com
+GitHub: https://github.com/sreeja21407
